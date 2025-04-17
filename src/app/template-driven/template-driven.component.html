@@ -1,0 +1,46 @@
+<h1>Template-Driven Form </h1>
+
+<form class="form" #userForm="ngForm" (ngSubmit)="addUser(userForm.value)">
+    <input type="text" placeholder="enter name" name="name" ngModel><br>
+    <input type="password" placeholder="enter password" name="password" ngModel>
+    <input type="range" min="1" max="10" name="rank" ngModel>
+    <select name="gender" ngModel>
+        <option value="">Select gender</option>
+        <option value="male">Male</option>
+        <option value="female">Female</option>
+    </select>
+    <button type="submit">Add User</button>
+</form>
+
+<span>
+    <b>User Added :</b>  name :       <b> {{details?.name}} </b>
+                         password :   <b> {{details?.password}} </b> 
+                         rank :       <b> {{details?.rank}} </b>
+                         gender :     <b> {{details?.gender}} </b>   
+</span>
+
+<h1> Validation Template-Driven Form </h1>
+
+<form #userForm2="ngForm" (ngSubmit)="getUser(userForm2.value)" class="form" >
+    <input ngModel #name="ngModel" required maxlength="30" type="text" name="name" placeholder="enter name"   >
+    <span *ngIf="name.hasError('required') && (name.touched || name.invalid)">* Invalid name</span>
+
+    <input ngModel #password="ngModel" required minlength="8" type="password" name="password"  placeholder="enter password" >
+    <span *ngIf="password.hasError('required')">* Invalid password </span>
+    <span *ngIf="password.hasError('minlength') && password.touched">* Minimum 8 characters required</span>
+
+    <select ngModel #city="ngModel" required name="city" >
+        <option value="">Select City</option>
+        <option value="mumbai">Mumbai</option>
+        <option value="delhi">Delhi</option>
+        <option value="banglore">Banglore</option>
+    </select>
+    <span *ngIf="city.hasError('required')">* City required</span>
+
+    <button [disabled]="userForm2.invalid" type="submit">submit</button>
+</form>
+<span>
+    <b>User Added :</b>  name :       <b> {{userDeatail?.name}} </b>
+                         password :   <b> {{userDeatail?.password}} </b> 
+                         rank :       <b> {{userDeatail?.city}} </b>
+</span>

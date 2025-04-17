@@ -1,0 +1,66 @@
+<!-- <h1>Reactive-Form Demo</h1> -->
+<hr>
+<h2> 1) Form Control </h2>
+<hr>
+
+<div id="form">
+    <input type="text" placeholder="enter your name" [formControl]="username" >
+    <input type="text" placeholder="enter your password" [formControl]="password">
+
+    <button (click)="submitUserInfo()">submit</button>
+</div>
+
+<div id="submit" *ngIf="show">
+    <p> Submitter User Info </p>
+    <p> Name : <b> {{username.value}} </b> </p>
+    <p> Password : <b> {{password.value}} </b> </p>
+</div><hr>
+
+<h2> 2) Form Group </h2><hr>
+
+<form [formGroup]="profileForm" id="form">
+
+    <input type="text" formControlName="name" placeholder="enter name">
+    <input type="text" formControlName="father" placeholder="enter fathers name">
+    <input type="text" formControlName="state" placeholder="enter your city">
+
+    <button (click)="submitProfileForm()">submit</button>
+    <button (click)="setDefault()">Set My Info</button>
+
+</form>
+<div id="submit" *ngIf="show2">
+    <p> Submitter User Info </p>
+    <p> Name : <b> {{profileForm.value.name}} </b> </p>
+    <p> Father's Name : <b> {{profileForm.value.father}} </b> </p>
+    <p> State : <b> {{profileForm.value.state}} </b> </p>
+</div><hr>
+
+<h2> 2) Reactive Form Validation </h2><hr>
+
+<form id="validationForm" [formGroup]="customerForm" class="form-container">
+
+    <h2>Register Form</h2>
+  
+    <div class="details">
+      <input type="text" placeholder="Enter user-name" formControlName="customername" class="input-field" />
+      <label *ngIf="custname?.hasError('required')" class="error">*name required</label>
+      <label *ngIf="custname?.touched && custname?.invalid" class="warning">Please enter name</label>
+    </div>
+  
+    <div class="details">
+      <input type="text" placeholder="Enter user-password" formControlName="customerpassword" class="input-field" />
+      <label *ngIf="custpassowrd?.hasError('required')" class="error">*password required</label>
+      <label *ngIf="custpassowrd?.touched && !custpassowrd?.valid" class="warning">Please enter password</label>
+    </div>
+  
+    <div class="details">
+      <input type="text" placeholder="Enter user-email" formControlName="customermail" class="input-field" />
+      <label *ngIf="custemail?.hasError('required')" class="error">*email required</label>
+      <label *ngIf="custemail?.touched && !custemail?.valid" class="warning">Please enter email</label>
+    </div>
+  
+    <button (click)="customerInfo()" class="submit-btn">Register</button>
+  
+  </form>
+  
+

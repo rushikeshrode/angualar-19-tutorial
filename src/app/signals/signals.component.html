@@ -1,0 +1,37 @@
+<hr><h2>Why we need Signals:</h2>
+
+<p>'c' is dependent on 'a' and 'b'. If we change the value of a/b midway
+     the value of 'c' doesn't change in normal variables. <b>X is signal. calling signal: [signalName()]</b>  </p>
+
+<span>a : {{a}} | b : {{b}} | c : {{c}} | x : {{x()}} </span>
+<button (click)="updateB()">update B</button>
+<button (click)="updateX()">update X</button>
+
+<hr>
+
+<h2>Counter Project using Signal + Inline set()</h2>
+
+<button (click)="y.set(y() - 1)"><h3>Decrement</h3></button>
+<h1> {{y()}} </h1>
+<button (click)="y.set(y() + 1)"><h3>Increment</h3></button>
+
+<hr>
+
+<h2> Data types in signal: WritableSignal<>: Parameter=1/2 </h2>
+
+<h3> {{num1()}} </h3>
+<button (click)="updateNum()">update++</button>
+
+<h3> {{num2()}} </h3>
+<button (click)="sayMyName()">say-my-name</button>
+
+<hr>
+<h2>computed signal</h2>
+<p>act like const. while you these cannot be changed(no set() method avalable), 
+     if values of what they are dependent on change, computed variable will change.</p>
+
+<span><strong> me : {{me()}} | you : {{you()}} | meyou : {{meyou()}} -- </strong></span>
+<button (click)="updateYou()">update-her</button>
+
+<br><br><br>
+<hr>

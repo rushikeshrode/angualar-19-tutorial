@@ -1,0 +1,40 @@
+<h1> |> 3 Ways you can share data between 2 pages </h1>
+<ol>
+    <li> via [routerLink] = ['/destination', key:'value'] where <b>key:'value' is object type</b> </li>
+    <li> via mathod call where key:'value' is object type </li>
+    <li> via app.routes.ts file, it can take two parameters. path: 'output', component: OutputComponent ,
+        data:name:'Rushikesh Rode'. <b>where data takes Object </b></li>
+</ol>
+
+<div>
+    <h3> First way: </h3>
+    <li> add 2nd param of key:value in routerLink. </li>
+    <li> add route call constructor(private routes:ActivatedRoute) & get using ngOnInit()</li>
+
+    <br>
+    <div>
+        <input type="text" placeholder="enter name" [(ngModel)]="username">
+        <button [routerLink]="['/output', {name:username}]">submit</button>
+        <p> live : {{username}} </p>
+    </div><hr>
+
+    <h3> Second way: </h3>
+    <li> create callback() method and nevigate using routes using routes. Call constructor(router:Router) </li>
+    <li> this.router.navigate(['output'], queryParams:mail:this.useremail); 2nd param is obj that takes obj itself.</li>
+    
+    <div><br>
+        <input type="text" placeholder="email" [(ngModel)]="useremail">
+        <button (click)="submitEmail()">submit</button>
+        <p> live : {{useremail}} </p>
+    </div><hr>
+
+    <h3> Three way: </h3>
+    <p> <b>Go to Output Button </b> is to test method 3: data coming from routes.ts</p>
+    <button routerLink="output"> Go to Output </button><br><hr>
+
+    <b> login method will hold both username and email :~</b>
+    <p> the login is #commented bcz of suscribe function conflict</p>
+    <button [routerLink]="'/output'" (click)="login()"> Login </button> 
+    <br><br>
+
+</div>

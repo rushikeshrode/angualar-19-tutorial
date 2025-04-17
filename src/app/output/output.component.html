@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+
+<body>
+    <h1> 1) Information from Login Component</h1>
+
+    <p> username is coming using routerLink 2nd param </p>
+    <li> username : <b>{{username}}</b> </li>
+
+    <hr>
+    <p> useremail is coming using method/function call </p>
+    <li> useremail : <b>{{useremail}}</b> </li>
+
+    <hr>
+    <p> city is coming using app.routes.ts file </p>
+    <li> city : <b>{{city}}</b> </li>
+    <hr>
+
+    <h1> 2) Information from Dynamic Route Component </h1>
+
+    <h3> User Information :</h3>
+    <li> ID : <b>{{id}}</b> </li>
+    <li> Name : <b>{{name}}</b> </li>
+    <hr>
+
+    <h1> 3) Information sending PassData-ToChildComponent </h1>
+    <li> Child Component <b>[PassDataToChildComponent]</b>. This <b>[OutputComponent]</b> acting like Parent Here.</li>
+    <div class="p2c">
+        <select name="city" [(ngModel)]="myCity">
+            <option value="">Select city</option>
+            <option value="Mumbai">Mumbai</option>
+            <option value="New Delhi">New Delhi</option>
+            <option value="Hydarabad">Hydarabad</option>
+        </select>
+        <p> Selected City: {{myCity}} </p>
+
+        <app-pass-data-to-child childName="Rushikesh Rode" [myCity]="myCity">
+        </app-pass-data-to-child>
+
+        <h1> 4) Information sending PassDataTo-ChildComponent [Using ForLoop to Pass Data] </h1>
+        <p *ngFor="let frnd of friends">
+            <app-pass-data-to-child [frnd]="frnd">
+            </app-pass-data-to-child>
+        </p>
+    </div>
+
+    <h1> 5) Information receiving PassDataTo-ParentComponent </h1>
+    <li> Parent Component is This <b>[OutputComponent]</b>. <b>[PassDataTo-ParentComponent]</b> acting like Child Here.</li>
+
+    <app-pass-data-to-parent (getStates)="handleStates($event)">
+    </app-pass-data-to-parent>
+
+    <h4> States coming from Child : </h4>
+    <span *ngFor="let s of myStates"> || <b> {{s}} </b> || </span>
+    
+
+</body>
+
+</html>

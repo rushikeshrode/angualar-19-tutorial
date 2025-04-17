@@ -1,0 +1,18 @@
+<h1> How to define Dynamic Route ?</h1>
+<li> add route to 'app.routes.ts' file. use colin:name to set dynamic path. eg. <b> path: 'path/:id' </b> </li>
+<li> use interpolation to navigate through path.</li><br>
+
+<table border="1" class="tableLinks">
+    <tr>
+        <td><b>Sr.</b></td>
+        <td><b>Send ID</b></td>
+        <td><b>Send ID+NAME</b></td>
+    </tr>
+    @for (user of users; track $index; let id= $index) {
+    <tr>
+        <td> {{id+1}} </td>
+        <td> <a routerLink="output/{{user.id}}"> {{user.name}} </a> </td>
+        <td> <a routerLink="output/{{user.id}}/{{user.name}}"> {{user.name}} </a> </td>
+    </tr>
+    }
+</table>

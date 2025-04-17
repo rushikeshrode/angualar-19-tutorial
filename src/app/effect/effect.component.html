@@ -1,0 +1,11 @@
+<hr>
+<div class="counter">
+    <h1> {{count()}} </h1>
+    <button (click)="add()">ADD</button>
+</div>
+
+@if (display) {
+    <div class="reached">
+         You Reached : {{count()}} 
+    </div>
+}

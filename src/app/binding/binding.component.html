@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1 style="margin-left: 10%; background-color: tomato;"> 
+        1) Attribute Binding</h1>
+    <hr>
+    <div>
+        <h1> 1.1: Data Binding [Interpolation] </h1>
+        <p>Username = {{userName}} </p>
+    </div>
+
+    <hr>
+    <div>
+        <h1> 1.2: Attribute Binding [HTML Properties]</h1>
+        <img [src]="imgLink"/>
+    </div>
+
+    <hr>
+    <div>
+        <h1> 1.3: Event Binding [via Methods]</h1>
+        <button (click)="sayHello()" >Click me!</button>
+    </div>
+
+    <hr><br>
+
+    <h1> 1.4: Two-Way Binding </h1>
+    <div>
+        <h3> 1.4.1) using [(ngModel)] recommended</h3>
+        <input [(ngModel)]="name" placeholder="enter name">
+        <h3> NAME : {{name}} </h3>
+    </div>
+    <div>
+        <h3> 1.4.2) using reference variable</h3>
+        <p>it will update with other field, as u click in & out of other input box. use method to store and render.</p>
+        <input type="text" placeholder="enter email" #useremail >
+        <button (click)="getEmail(useremail.value)">submit</button>
+        <!-- <label for=""><b> EMAIL : {{email}} </b></label> -->
+        <h3>  EMAIL : {{email}} </h3>
+    </div>
+    <div>
+        <h3> 1.4.3) using event </h3>
+        <input type="text" placeholder="city" (input)="getCity($event)">
+        <h3> CITY : {{city}} </h3>
+    </div>
+
+</body>
+</html>
+
+
+
+
+

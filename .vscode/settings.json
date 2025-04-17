@@ -1,0 +1,14 @@
+{
+    "editor.fontSize": 16,
+    "editor.minimap.sectionHeaderFontSize": 9,
+    "editor.codeLensFontFamily": "",
+    "terminal.integrated.fontLigatures.enabled": false,
+    "terminal.integrated.fontSize": 16,
+    "terminal.integrated.fontWeight": "normal",
+    "github.copilot.enable": {
+        "*": false,
+        "plaintext": false,
+        "markdown": false,
+        "scminput": false
+    }
+}

@@ -1,0 +1,11 @@
+#city{
+    margin: 50px 30px 50px 50px;
+    height: 40px;
+    background-color: rgba(134, 241, 27, 0.597);
+    font-size: 20px;
+    border-radius: 5%;
+}
+#cityname{
+    margin: 20px 20px 20px 20px;
+    border-radius: 10%;
+}

@@ -1,0 +1,50 @@
+
+ol{
+    display: flex;
+    justify-content: space-evenly;
+    background-color: red;
+    color: whitesmoke;
+    word-spacing: 15px;
+    border: 3px solid rgb(112, 76, 76);
+    padding: 4px;
+    border-radius: 5px;
+    font-size: 20px;
+}
+.pipes li{
+    background-color: blue;
+    color: whitesmoke;
+    width: fit-content;
+    padding: 10px;
+    font-size: 20px;
+    margin: 20px;
+    padding: 7px;
+    border-radius: 8px;
+}
+.pipes p {
+    font-size: 15px;
+    background-color:grey;
+    color: whitesmoke;
+    padding: 7px;
+    margin-left: 40px;
+    width: fit-content;
+    border-radius: 5px;
+}
+
+.pipes{
+    display: flex;
+    justify-content: space-evenly;
+    background-color: blanchedalmond;
+    border: 2px solid rgb(115, 94, 64);
+    border-radius: 15px;
+}
+
+header{
+    justify-self: center;
+    font-size: 30px;
+    padding: 8px;
+    border-radius: 7px;
+    border: 5px solid rgb(87, 39, 39);
+    background-color: brown;
+    color: whitesmoke;
+    letter-spacing: 5px;
+}

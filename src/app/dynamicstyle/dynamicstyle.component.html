@@ -1,0 +1,21 @@
+<h1> Dynamic Style in Angular </h1>
+
+<h4>use | [style.fontSize] | instead of | style="font-size: 30px;" | </h4>
+<p> camelcase property declaration. either use directly or u can use variables in ts files </p>
+
+@if (zoom) {
+    <div id="trials">
+        <p [style.fontSize] = "size1"> This is Trial 1 using size1 = 10px</p>
+        <p [style.fontSize] = "size2"> This is Trial 2 using size1 = 30px</p>
+        <p [style.fontSize] = "size3"> This is Trial 3 using size1 = 50px</p>
+    </div>
+}
+<button (click)="updateZoom()">toggle ZOOM : {{zoom}} </button>
+
+<div id="trials">
+    <h3> You can use variables declred in ts file in "" or directly use color as "'red'" </h3>
+    <p [style.backgroundColor]="bgColor"> Trying [backgroundColor]="'tomato'"/"varName" </p>
+
+    <h3> the background color of following will change. If zoom:true=pink else yello </h3>
+    <p [style.backgroundColor]="zoom?'pink':'yellow'"> Trying to use condition : "zoom?'pink':'yellow'" </p>
+</div>

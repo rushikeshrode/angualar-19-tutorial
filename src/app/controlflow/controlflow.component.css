@@ -1,0 +1,43 @@
+#odd{
+    width: 100px;
+    height: 100px;
+    color: whitesmoke;
+    background-color: brown;
+}
+
+#even{
+    width: 100px;
+    height: 100px;
+    color: black;
+    background-color:chartreuse;
+}
+#other{
+    width: 100px;
+    height: 100px;
+    color: black;
+    background-color:yellow;
+}
+
+.flow{
+    display: flex;
+}
+
+button{
+    margin: 20px 20px 20px 20px;
+    border-radius: 20%;
+    width: 100px;
+    height: 90px;
+    font-size: 20px;
+    margin-top: 10px;
+}
+input{
+    margin: 20px 20px 20px 20px;
+    border-radius: 20%;
+    width: 100px;
+    height: 90px;
+    font-size: 20px;
+    margin-top: 10px;
+}
+div {
+    border-radius: 5%;
+}

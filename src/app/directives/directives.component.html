@@ -1,0 +1,42 @@
+<h1 style="display: flex; justify-content: center;">Directives</h1>
+<b> 1) Component Directives : </b>       Component : View, HTML template    
+<b> 2) Structural Directives : </b>     *ngIf, *ngFor, *ngSwitch            
+<b> 3) Attribute Directives : </b>      [ngClass], [ngStyle]                <br><hr>
+
+<h3> 1 : using *ngIf & ng-template</h3>
+<p> If show property is false, msg is hidden. <b>show : {{show}}</b> </p>
+
+<b *ngIf="show; else elseBlock"> MESSAGE </b>
+<button (click)="toggle()">Toggle</button>
+<ng-template #elseBlock> <b> HIDDEN </b> </ng-template> <hr>
+
+<h3> 2: using *ngFor </h3>
+<p> looping through the students name </p>
+<span *ngFor="let x of students"> <b> {{x}} </b> | </span>  <hr>
+
+<h3> 3: using [ngSwitch],*ngSwitchCase="'~'", *ngSwitchCase="'~'"   </h3>
+
+<span *ngFor="let btn of colorBtn"> <button (click)="updateColor(btn)"> <b> {{btn}} </b> </button> ~ </span> Change Color
+
+<div [ngSwitch]="bgColor">
+
+    <h4 *ngSwitchCase="'red'" style="background-color: red;color: white;"> This is color RED</h4>
+    <h4 *ngSwitchCase="'yellow'" style="background-color: yellow;"> This is color YELLOW</h4>
+    <h4 *ngSwitchCase="'green'" style="background-color: green;color: white;"> This is color GREEN</h4>
+    <h4 *ngSwitchCase="'pink'" style="background-color: pink;"> This is color PINK</h4>
+    <h4 *ngSwitchCase="'grey'" style="background-color: grey;color: white;"> This is color GREY</h4>
+    <h4 *ngSwitchCase="'black'" style="background-color: black;color: white;"> This is color BLACK</h4>
+
+    <h4 *ngSwitchDefault> No color Matched </h4>
+    <p>Current Color: <b> {{ bgColor }} </b> </p>
+
+</div><hr>
+
+
+
+
+
+
+
+
+

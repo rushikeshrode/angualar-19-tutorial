@@ -1,0 +1,80 @@
+<hr>
+<h1 style="margin-left: 10%; background-color: tomato;"> 5) Loops</h1>
+    <h3 style="margin-left: 25%;"> 5.1) Loop in Array of Elements(String) || 5.2) Loop in Array of Objects</h3>
+
+<div style="display: flex;">
+
+    <table border="1" style="margin-left: 20%;">
+        <tr>
+            <th>ID</th>
+            <th>User</th>
+        </tr>
+        @for (user of users; track user; let id = $index){
+            <tr>
+                <td> {{id+1}} </td>
+                <td> {{user}} </td>
+            </tr>
+        }
+    </table>
+
+<!-- students : object -->
+    <table border="1" style="margin-left: 5%;">
+        <tr>
+            <th>ID</th>
+            <th>Name</th>
+            <th>Age</th>
+            <th>E-mail</th>
+            <th>Technology</th>
+            <th>Location</th>
+        </tr>
+        @for (student of students; track student.name; let id=$index) {
+            <tr>
+                <td> {{ id+1 }} </td>
+                <td>{{ student.name }}</td>
+                <td>{{ student.age }}</td>
+                <td>{{ student.email }}</td>
+                <td>{{ student.technology }}</td>
+                <td><button (click)="studentCity(student.name,student.city)">Get City</button></td>
+            </tr>
+        }
+    </table>
+    <div id="city">
+        <label id="cityname"> {{stdName}}</label>
+    </div>
+    <div id="city">
+        <label id="cityname"> {{stdCity}} </label>
+    </div>
+</div>
+
+<hr>
+<h1>For Loop Contextual Variables</h1>
+<p> variables : <b>$count, $index, $odd, $even, $first, $last</b> </p>
+<p> how to handle <b>empty data?</b> use empty[] array:</p>
+
+<div style="margin-left: 30%; font-size: 25px;">
+    <table border="1">
+        <tr>
+            <th>ID</th>
+            <th>Count</th>
+            <th>Name</th>
+            <th>First</th>
+            <th>Last</th>
+            <th>Even</th>
+        </tr>
+    
+        @for (user of users; track user) {      <!-- if loop on empty: @empty condition will execute -->
+            <tr>
+                <td> {{$index + 1}} </td>
+                <td> {{$count}} </td>
+                <td> {{user}} </td>
+                <td> {{$first}} </td>
+                <td> {{$last}} </td>
+                <td> {{$even}} </td>
+            </tr>
+        }
+        @empty {
+            <h2> --No Data Available-- </h2>
+        }
+    </table>
+</div>
+

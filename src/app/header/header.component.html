@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+
+<body>
+  <!-- Navigation Bar -->
+  <nav class="navbar">
+    <div class="logo" [routerLink]="'/home'">Agnular</div>
+
+    <div class="rush">
+
+      <button [routerLink]="'/home'">Home</button>
+
+       <!-- 🔽 Dropdown for Binding, Event-Binding, Signals, Effect,Dynamic-Style   -->
+       <div class="dropdown">
+        <button class="dropbtn">Core Topis ⤵</button>
+        <div class="dropdown-content">
+          <a [routerLink]="'/binding'">Data-Binding</a>
+          <a [routerLink]="'/eventbinding'">Event-Binding</a>
+          <a [routerLink]="'/signals'">Signals</a>
+          <a [routerLink]="'/effect'">Effect</a>
+          <a [routerLink]="'/dynamicStyle'">Dynamic-Style</a>
+        </div>
+      </div>
+
+      <!-- 🔽 Dropdown for ControlFlow -->
+      <div class="dropdown">
+        <button class="dropbtn">ControlFlow ⤵</button>
+        <div class="dropdown-content">
+          <a [routerLink]="'/ifelse'">If-Else</a>
+          <a [routerLink]="'/loops'">Loops</a>
+          <a [routerLink]="'/directives'">Directives</a>
+        </div>
+      </div>
+
+
+      <button [routerLink]="'/dynamicRoute'">Dynamic-Route</button>
+      <button [routerLink]="'/pipes'">Pipes</button>
+      
+
+      <!-- 🔽 Dropdown for Forms -->
+      <div class="dropdown">
+        <button class="dropbtn">Forms ⤵</button><br>
+        <div class="dropdown-content">
+          <a [routerLink]="'/reactive-form'">Reactive Form</a>
+          <a [routerLink]="'/template-driven-form'">Template-Driven</a>
+        </div>
+      </div>
+
+
+      <!-- 🔽 Dropdown for Data Sharing to Child Component -->
+      <div class="dropdown">
+        <button class="dropbtn">Parent🔂Child ⤵</button><br>
+        <div class="dropdown-content">
+          <a [routerLink]="'/send-to-child'">Parent~Child</a>
+          <a [routerLink]="'/send-to-parent'">Child~Parent </a>
+          <a [routerLink]="'/output'">Output [Parent]</a>
+        </div>
+      </div>
+
+      <button [routerLink]="'/services'">Services</button>
+
+      <!-- 🔽 Dropdown for Projects -->
+      <div class="dropdown">
+        <button class="dropbtn">Projects ⤵</button><br>
+        <div class="dropdown-content">
+          <a [routerLink]="'/counter'">Counter App</a>
+          <a [routerLink]="'/toDoApp'">To-Do App</a>
+          <a [routerLink]="'/login'">Data Sharing</a>
+        </div>
+      </div>
+
+
+    </div>
+
+
+
+
+    <!-- <div class="nav-links">
+    <button [routerLink]="'/binding'">Binding</button>
+    <button [routerLink]="'/eventbinding'">Event-Binding</button>
+    <button [routerLink]="'/signals'">Signals</button>
+    <button [routerLink]="'/effect'">Effect</button>
+    <button [routerLink]="'/dynamicStyle'">Dynamic-Style</button>
+
+    <button [routerLink]="'/dynamicStyle'">Dynamic-Style</button>
+    <button [routerLink]="'/dynamicStyle'">Dynamic-Style</button>
+    <button [routerLink]="'/dynamicStyle'">Dynamic-Style</button>
+    <button [routerLink]="'/dynamicStyle'">Dynamic-Style</button>
+    <button [routerLink]="'/dynamicStyle'">Dynamic-Style</button>
+    <button [routerLink]="'/dynamicStyle'">Dynamic-Style</button>
+    <button [routerLink]="'/dynamicStyle'">Dynamic-Style</button>
+    <button [routerLink]="'/dynamicStyle'">Dynamic-Style</button>
+  </div> -->
+  </nav>
+
+</body>
+
+</html>

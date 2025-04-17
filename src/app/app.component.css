@@ -1,0 +1,81 @@
+/* This keeps the layout clean and adds space around every page */
+.main-content {
+  padding: 1rem 1rem;
+  /* max-width: 1200px;
+  margin: auto; */
+}
+
+
+/* .navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #333;
+  padding: 12px 24px;
+  color: white;
+}
+
+.logo {
+  font-size: 3.5rem;
+  font-weight: bold;
+  background: linear-gradient(to right, #e98737, #fb023c);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.logo:hover {
+  transform: scale(1.05);
+  text-shadow: 0 0 5px rgba(221, 0, 49, 0.5)
+}
+
+.nav-links button {
+  margin-top: 5px;
+  background-color: transparent;
+  border: none;
+  color: white;
+  margin-left: 16px;
+  font-size: 18px;
+  cursor: pointer;
+  transition: color 0.3s;
+}
+
+.nav-links button:hover {
+  color: #00d8ff;
+}
+
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.dropbtn {
+  padding: 8px 12px;
+  background-color: #ddd;
+  border: none;
+  cursor: pointer;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: white;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+  z-index: 1;
+}
+
+.dropdown-content a {
+  padding: 10px 16px;
+  display: block;
+  cursor: pointer;
+  text-decoration: none;
+  color: black;
+}
+
+.dropdown-content a:hover {
+  background-color: #f1f1f1;
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+} */

@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Angular-19 Tutorial</title>
+</head>
+
+<body>
+
+  <header>ANGULAR19 CHAPTERS</header>
+
+  <div class="container">
+
+    <div class="chapter">
+      <h2>Chapter 1: Data Binding</h2>
+      <ul>
+        <li>Interpolation: userName </li>
+        <li>Attribute Binding: <code>[src]="imgLink"</code></li>
+        <li>Event Binding: <code>(click)="sayHello()"</code></li>
+        <li>Two-Way Binding: <code>[(ngModel)]="userEmail"</code></li>
+      </ul>
+    </div>
+
+    <div class="chapter">
+      <h2>Chapter 2: Counter Project</h2>
+      <pre><code>
+&lt;h1 class="c" [style.color]="bgColor"&gt;
+   counter 
+&lt;/h1&gt;
+&lt;button (click)="toggle('decrement')"
+&gt;Decrement&lt;/button&gt;
+&lt;button (click)="toggle('reset')"
+&gt;Reset&lt;/button&gt;
+&lt;button (click)="toggle('increment')"
+&gt;Increment&lt;/button&gt;
+      </code></pre>
+    </div>
+
+    <div class="chapter">
+      <h2>Chapter 3: Event Bindings</h2>
+      <ul>
+        <li><code>(click)="handleEvent($event)"</code></li>
+        <li><code>(mouseenter)="redBtn($event)"</code></li>
+        <li><code>(mouseover)="greenBtn($event)"</code></li>
+        <li><code>(input)="address($event)"</code></li>
+        <li><code>(focus)="focusEvent($event)"</code></li>
+        <li><code>(blur)="blurEvent($event)"</code></li>
+      </ul>
+    </div>
+
+    <div class="chapter">
+      <h2>Chapter 4: Control Flow</h2>
+      <ul>
+        <li><code>*ngIf</code>, <code>*ngSwitch</code></li>
+        <li><strong>Control flow:</strong> if-else</li>
+        <li><strong>Switch:</strong> switch-case</li>
+      </ul>
+    </div>
+
+    <div class="chapter">
+      <h2>Chapter 5: For Loop</h2>
+      <ul>
+        <li><code>*ngFor</code></li>
+      </ul>
+    </div>
+
+    <div class="chapter">
+      <h2>Chapter 6: Signals</h2>
+      <ul>
+        <li>Writable signals (changeable): <code>set()</code>, <code>update()</code></li>
+        <li>Computed signals (read-only, auto-update when dependencies change)</li>
+        <li><strong>Generic:</strong> <code>signal&lt;number | string&gt;</code></li>
+      </ul>
+    </div>
+
+    <div class="chapter">
+      <h2>Chapter 7: effect()</h2>
+      <p>Used to perform side effects when signals change.</p>
+    </div>
+
+    <div class="chapter">
+      <h2>Chapter 8: Dynamic Style</h2>
+      <ul>
+        <li><code>[style.fontSize]="'20px'"</code></li>
+        <li><code>[style.fontSize.px]="size"</code></li>
+        <li><code>[style.backgroundColor]="zoom ? 'pink' : 'yellow'"</code></li>
+      </ul>
+    </div>
+
+    <div class="chapter">
+      <h2>Chapter 9: Directives</h2>
+      <ul>
+        <li><strong>Component:</strong> <code>&lt;app-home&gt;</code>, <code>Component</code></li>
+        <li><strong>Structural:</strong> <code>*ngIf</code>, <code>*ngFor</code>, <code>*ngSwitchCase</code></li>
+        <li><strong>Attribute:</strong> <code>[ngStyle]</code>, <code>[ngClass]</code></li>
+        <li>Also learn: <code>&lt;ng-template&gt;</code></li>
+      </ul>
+    </div>
+
+    <div class="chapter">
+      <h2>Chapter 10: Routing</h2>
+      <ul>
+        <li>Static: <code>routerLink="/path"</code></li>
+        <li>Dynamic: <code>[routerLink]="'/path'"</code></li>
+        <li>Dynamic Path: <code>path: 'output/:id/:name'</code></li>
+        <li>Wildcard: <code>path: '**'</code> (should be last)</li>
+      </ul>
+    </div>
+
+    <div class="chapter">
+      <h2>Chapter 11: Error Page</h2>
+      <ul>
+        <li><code>path: '**'</code> matches all unknown routes</li>
+        <li>Used for 404 page not found</li>
+        <li>Add at the end of routes list</li>
+      </ul>
+    </div>
+
+    <div class="chapter">
+      <h2>Chapter 12: Sharing Data Between Components</h2>
+      <p>Using routes, query params, and route data to share between pages like login and output.</p>
+    </div>
+
+    <div class="chapter">
+      <h2>Chapter 13: Reactive Forms</h2>
+      <ul>
+        <li><strong>FormControl:</strong> <code>username = new FormControl()</code></li>
+        <li><strong>FormGroup:</strong> <code>new FormGroup( name: new FormControl() )</code></li>
+        <li><code>[formGroup]</code>, <code>formControlName</code></li>
+        <li>Validation: <code>Validators.required</code>,,<code> minLength</code>, <code>maxLength</code>,
+          <code>pattern</code></li>
+      </ul>
+    </div>
+
+    <div class="chapter">
+      <h2>Chapter 14: Template-Driven Forms</h2>
+      <ul>
+        <li>Use <code>FormsModule</code></li>
+        <li>Form tag with <code>#userForm="ngForm"</code></li>
+        <li><code>ngModel</code> and <code>name</code> required</li>
+        <li>Validation via <code>#name="ngModel"</code> and <code>required</code>, <code>maxlength</code></li>
+      </ul>
+    </div>
+
+    <div class="chapter">
+      <h2>Chapter 15: Pipes</h2>
+      <ul>
+        <li>Prebuilt pipe: <code> 'ram' | uppercase </code> </li>
+        <li>Create custom: <code>ng generate pipe customPipe</code></li>
+      </ul>
+    </div>
+
+    <div class="chapter">
+      <h2>Chapter 16: Services with API</h2>
+      <ul>
+        <li>Generate: <code>ng g s my-service</code></li>
+        <li>Inject service in constructor: <code>private myService: MyService</code></li>
+        <li>Use HttpClient in service, return API: <code>this.http.get(this.url)</code></li>
+        <li>Use in component:
+          <pre><code>
+this.productsService.getProductsList()
+.subscribe((data:any)=>
+  this.products = data.products;);
+          </code></pre>
+        </li>
+      </ul>
+    </div>
+
+  </div>
+
+  <footer>
+    Project by Rushikesh Rode — Generated using Angular CLI 19.2.7 — © 2025
+  </footer>
+
+</body>
+
+</html>

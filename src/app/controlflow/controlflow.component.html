@@ -1,0 +1,87 @@
+<hr>
+<h1 style="margin-left: 10%; background-color: tomato;"> 4) Control Flow Statement </h1>
+
+<div class="flow">
+
+    <h2>using if-else</h2>
+
+    <button (click)="toogle()">toogle</button>
+
+    @if (condition1) {
+        <div id="odd">condition-1 is TRUE</div>
+    }
+    @else {
+        <div id="even">condition-1 is False</div>
+    }
+
+    <button (click)="showDiv()"> {{toggleBtn?'show green button':'show brown button'}} </button>
+
+    @if (toggleBtn) {
+        <div id="odd"></div>
+    }
+    @else {
+        <div id="even"></div>
+    }
+        
+</div>
+
+<hr>    <!-- using if else if  -->
+
+<div class="flow">
+
+    <h2>using if-else-if</h2>
+
+    <button (click)="displayColor(1)">(1) tomato</button>
+    <button (click)="displayColor(2)">(2) green</button>
+    <button (click)="displayColor(3)">(3) yellow</button>
+    <button (click)="displayColor(4)">(4) blue</button>
+    <input type="text" id="button" placeholder="enter color no" (input)="colorNo($event)">
+
+
+    @if(displayDiv==1){
+        <div style="width: 15%;height:110px;background-color: tomato;">1</div>
+    }@else if (displayDiv==2) {
+        <div style="width: 15%;height:110px;background-color: green;">2</div>
+    }@else if (displayDiv==3) {
+        <div style="width: 15%;height:110px;background-color: yellow;">3</div>
+    }@else if (displayDiv==4) {
+        <div style="width: 15%;height:110px;background-color: blue;">4</div>
+    }@else {
+        <div style="width: 15%;height:110px;background-color: black;">#</div>    
+    }
+
+</div>
+
+<hr>    <!-- using switch case  -->
+
+<div class="flow">
+
+    <h2>using switch :</h2>
+
+    <button (click)="changeColor('tomato')">tomato</button>
+    <button (click)="changeColor('green')">green</button>
+    <button (click)="changeColor('yellow')">yellow</button>
+    <button (click)="changeColor('blue')">blue</button>
+    <input type="text" id="button" placeholder="enter color" (input)="change($event)">
+
+    @switch (color) {
+        @case ('tomato') {
+            <div style="width: 15%;height:110px;background-color: tomato;">tomato</div>
+        }
+        @case ('green') {
+            <div style="width: 15%;height:110px;background-color: green;">green</div>
+        }
+        @case ('yellow') {
+            <div style="width: 15%;height:110px;background-color: yellow;">yellow</div>
+        }
+        @case ('blue') {
+            <div style="width: 15%;height:110px;background-color: blue;">blue</div>
+        }
+        @default {
+            <div style="width: 15%;height:110px;background-color: black;">black</div>
+        }
+    }
+
+
+</div>
+

@@ -1,0 +1,35 @@
+<hr>
+    <h1 style="margin-left: 10%; background-color: tomato;"> 3) Events in Angular-19</h1>
+<!-- events -->
+<div id="box">
+
+    <button (click)="handleEvent($event)">Click :: Event</button>
+
+    <div class="odd" (mouseenter)="redBtn($event)"> Mouseenter </div>
+
+    <div class="even" (mouseover)="greenBtn($event)"> Mouseover </div>
+
+    <textarea class="other" placeholder="Enter your address" (input)="address($event)"></textarea>
+
+    <input type="text" value="(focus),(blur)" class="other" (focus)="focusEvent($event)" (blur)="blurEvent($event)">
+
+</div><br>
+<hr>
+<!-- Two-way event binding -->
+
+<div><br>
+
+    <input type="text" value="{{name}}" (input)="getName($event)" placeholder="name"><br><br>
+    <button >submit</button>
+    <button (click)="setName()">set</button>
+    <label> <strong>Username : {{name}} </strong> </label>
+    <br><br>
+
+    <input type="email" placeholder="email" value="{{usermail}}" #useremail><br><br>    <!-- #useremail : reference variable -->
+    <button (click)="submit(useremail.value)">submit</button>
+    <button (click)="setEmail()">set</button>
+    <label> <strong>Mail : {{usermail}} </strong> </label>
+
+</div>
+
+

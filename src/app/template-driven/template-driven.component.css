@@ -1,0 +1,30 @@
+.form{
+    display: flex;
+    justify-content: space-around;
+    min-height: 30px;
+    padding: 20px;
+    
+}
+.form input{
+    font-size: 20px;
+    border-radius: 5px;
+    width: 250px;
+    padding: 8px;
+}
+.form button,select{
+    font-size: large;
+    border-radius: 5px;
+    width: 150px;
+    padding: 10px;
+}
+/* .form select{
+    font-size: large;
+    border-radius: 5px;
+    width: 150px;
+    padding: 10px;
+} */
+span{
+    display: flex;
+    justify-content: space-evenly;
+    padding: 20px;
+}

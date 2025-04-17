@@ -1,0 +1,81 @@
+<header> Pipes : Build-in & Custome </header>
+
+<ol>
+    <b> Build-in Pipes : </b>
+    <li>uppercase</li>
+    <li>lowercase</li>
+    <li>titlecase</li>
+    <li>date:'fullDate'</li>
+    <li>date:'short'</li>
+    <li>currency:'INR'</li>
+    <li>json</li>
+    <li>slice:0:6</li>
+</ol>
+<hr>
+
+<div class="pipes">
+    <div class="build-in">
+
+        <h1> 1: Build in Pipes : </h1>
+        <hr>
+
+        <li> uppercase, lowercase and titlecase</li>
+        <p>{{ 'hello angular' | uppercase }}</p> <!-- Output: HELLO ANGULAR -->
+        <p>{{ 'HELLO ANGULAR' | lowercase }}</p> <!-- Output: hello angular -->
+        <p>{{ 'angular is awesome' | titlecase }}</p> <!-- Output: Angular Is Awesome -->
+
+        <hr>
+        <li> date:'short'/'fullDate'</li>
+        <p>Today is {{ today | date:'fullDate' }}</p> <!-- Output: Today is Monday, April 14, 2025 -->
+        <p>Short: {{ today | date:'short' }}</p> <!-- Output: 4/14/25, 12:00 AM -->
+
+        <hr>
+        <li> percent </li>
+        <p>{{ 0.85 | percent }}</p> <!-- Output: 85% -->
+
+        <hr>
+        <li> currency:'INR' default is USD</li> 
+        <p> {{ 2500 | currency }} </p>                    <!-- Default USD -->
+        <p> {{ 2500 | currency:'INR':'symbol' }} </p>     <!-- Using INR symbol ₹-->
+        <p> {{ 2500 | currency:'INR':'code' }} </p>       <!-- Using currency code INR -->
+        <p> {{ 2500 | currency:'INR':'symbol-narrow' }} </p>  <!-- Symbol-narrow (if supported) ₹ -->
+
+        <hr>
+        <li> json </li>
+        <p>{{ user | json }}</p> <!-- Output: {"name":"Avi","age":22} -->
+
+        <hr>
+        <li> slice:0:6</li>
+        <p>{{ 'AngularRocks' | slice:0:6 }}</p> <!-- Output: Angula -->
+        <hr>
+    </div>
+
+    <div>
+        <h1> 2: Custome Pipe with Arguments </h1><hr>
+        
+        <b> >> cmd : ng generate pipe reverse </b>
+        <li> reverse custom-pipe</li> ex. rushikesh
+
+        <p> 1: Rushikesh Prakashrao Rode </p>
+        <p> => {{ 'Rushikesh Prakashrao Rode' | reverse }} </p>
+
+        <p> 2: Yash Golawar </p>
+        <p> => {{ 'Yash Golawar' | reverse }} </p><hr>
+
+        <li> cube custom-pipe</li>
+        <p> ex. 3 : 3*3*3=27 </p>
+        <p> => {{ 3 | cube }} </p>
+
+        <p> ex. 9 : 9*9*9=81</p>
+        <p> => {{ 9 | cube }} </p><hr>
+
+        <li> powerTo : If arg not passed, It will power to 2. </li>
+        <p> Without argument : ex. 4^2 </p>
+        <p> {{ 4 | powerTo }} </p>
+
+        <p> With argument : ex. 4^6 </p>
+        <p> {{ 4 | powerTo:6 }}
+
+    </div>
+
+</div>

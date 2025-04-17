@@ -1,0 +1,29 @@
+<h1 id="title">TO-DO APP</h1>
+
+<div class="input-container">
+    <input type="text" placeholder="Enter your task here..." [(ngModel)]="task" />
+    <button (click)="addTask()">Add</button>
+</div>
+
+@if (task.length<1 && task.length<50) {
+    <h3 class="error"> {{error}} </h3>
+}
+
+<table class="task-table">
+    <thead>
+        <tr>
+            <th>ID</th>
+            <th>Task</th>
+            <th>Action</th>
+        </tr>
+    </thead>
+    <tbody>
+        @for (task of taskList; track task.id) {
+            <tr>
+                <td> {{task.id}} </td>
+                <td> {{task.userToDo}} </td>
+                <td><button (click)="deleteTast(task.id)">Delete</button></td>
+            </tr>
+        }
+    </tbody>
+</table>
